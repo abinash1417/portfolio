@@ -27,7 +27,7 @@ export default function Footer() {
               ABINASH<span style={{ color: 'var(--primary)' }}>.</span>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem', maxWidth: '260px', lineHeight: 1.6 }}>
-              Software Engineering undergraduate building high-performance full-stack systems.
+              Software Engineering undergraduate building full-stack systems and applied Generative AI.
             </p>
           </div>
 

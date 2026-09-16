@@ -1,7 +1,7 @@
 export const cvData = {
   personalInfo: {
     fullName: "Kopalachandran Abinash",
-    title: "Software Engineering Intern",
+    title: "Software Engineering & AI/ML Intern",
     phone: "0764610649",
     email: "kopalachandranabinash@gmail.com",
     location: "Colombo, Sri Lanka",
@@ -10,7 +10,7 @@ export const cvData = {
       github: "https://github.com/abinash1417",
       medium: "https://medium.com/@chandrannash281418"
     },
-    summary: "Third-year Software Engineering undergraduate at the University of Kelaniya with solid hands-on full-stack development experience. Proficient in building end-to-end web applications using Spring Boot, React.js, Node.js, and Docker, with a focus on scalable architecture, REST APIs, and secure role-based access systems. Passionate about problem solving, learning new technologies, and contributing to impactful software solutions."
+    summary: "Third-year Software Engineering undergraduate at the University of Kelaniya with hands-on experience across full-stack development and applied Generative AI. Proficient in building end-to-end web applications using Spring Boot, React.js, Node.js, and Docker, as well as multi-agent LLM systems and RAG pipelines using LangChain, LangGraph, and vector databases. Passionate about designing scalable, secure architectures — whether that's a production web app or an AI agent pipeline."
   },
   education: [
     {
@@ -53,8 +53,16 @@ export const cvData = {
       { name: "AWS",             level: 70 },
       { name: "Postman",         level: 90 },
       { name: "GitHub Actions",  level: 75 },
-      { name: "Cloudinary",      level: 80 },
-      { name: "Groq AI",         level: 85 }
+      { name: "Cloudinary",      level: 80 }
+    ],
+    aiml: [
+      { name: "LangChain",         level: 85 },
+      { name: "LangGraph",         level: 80 },
+      { name: "Groq AI",           level: 85 },
+      { name: "ChromaDB",          level: 75 },
+      { name: "RAG Pipelines",     level: 80 },
+      { name: "Prompt Engineering", level: 85 },
+      { name: "AI Agents",         level: 80 }
     ],
     coreConcepts: [
       "OOP (Object Oriented Programming)",
@@ -69,6 +77,7 @@ export const cvData = {
   projects: [
     {
       id: "electronics-ordering",
+      category: "fullstack",
       title: "Electronics Ordering System",
       type: "Individual Project",
       period: "Feb 2026 – May 2026",
@@ -84,7 +93,25 @@ export const cvData = {
       demoType: "youtube"
     },
     {
+      id: "synthesis-ai-platform",
+      category: "aiml",
+      title: "Synthesis — AI Research & Knowledge Platform",
+      type: "Individual Project",
+      period: null,
+      technologies: ["Python", "LangGraph", "LangChain", "ChromaDB", "Groq AI", "Streamlit"],
+      highlights: [
+        "Architected a multi-agent RAG platform where a Researcher agent dynamically selects between semantic search and full-document retrieval based on query intent.",
+        "Resolved a tool-routing flaw causing whole-document queries to fail by redesigning the agent's decision logic."
+      ],
+      aiFeatures: "Multi-agent RAG system with dynamic retrieval strategy selection, built on LangGraph orchestration and ChromaDB semantic search.",
+      image: "/images/synthesis.png",
+      github: "https://github.com/abinash1417/synthesis-ai-platform",
+      demo: "https://synthesis-ai-platform-aaa782jikuwkmtv8noum3u.streamlit.app/",
+      demoType: "live"
+    },
+    {
       id: "medical-booking",
+      category: "fullstack",
       title: "Medical Appointment Booking System",
       type: "Individual Project",
       period: "Mar 2026 – May 2026",
@@ -100,7 +127,42 @@ export const cvData = {
       demoType: "live"
     },
     {
+      id: "ai-se-assistant",
+      category: "aiml",
+      title: "AI Software Engineering Assistant",
+      type: "Individual Project",
+      period: null,
+      technologies: ["Python", "LangGraph", "LangChain", "Groq AI", "Streamlit"],
+      highlights: [
+        "Engineered a 4-stage automated code review pipeline (analysis, bug detection, test generation, scoring) producing a structured Code Health Report.",
+        "Validated evaluation honesty across clean, buggy, and poorly-structured code samples to prevent fabricated issues."
+      ],
+      aiFeatures: "Multi-agent LLM pipeline that reviews code, detects bugs, generates unit tests, and scores overall code health.",
+      image: "/images/ai-assistant.png",
+      github: "https://github.com/abinash1417/AI-software-engineering-assistant",
+      demo: "https://ai-software-engineering-assistant-pnm5g2fth3thobho53toxx.streamlit.app/",
+      demoType: "live"
+    },
+    {
+      id: "ai-career-platform",
+      category: "aiml",
+      title: "AI Career & Interview Platform",
+      type: "Individual Project",
+      period: null,
+      technologies: ["Python", "LangGraph", "LangChain", "Groq AI", "Streamlit"],
+      highlights: [
+        "Designed an end-to-end AI job-prep platform generating role-aware resume scoring, skill-gap analysis, and adaptive mock interview questions.",
+        "Uncovered and fixed a scoring flaw where resumes were judged in isolation rather than against the target role, improving evaluation accuracy."
+      ],
+      aiFeatures: "GenAI-powered career platform with LLM-generated resume analysis, tailored mock interviews, and role-specific feedback.",
+      image: "/images/ai-career.png",
+      github: "https://github.com/abinash1417/AI-Career-Interview-Platform",
+      demo: "https://ai-career-interview-platform-hjuesfzghouxmswtckm8ti.streamlit.app/",
+      demoType: "live"
+    },
+    {
       id: "book-fair",
+      category: "fullstack",
       title: "Book Fair Management System",
       type: "Group Project",
       period: "Oct 2025 – Jan 2026",
@@ -111,22 +173,6 @@ export const cvData = {
       ],
       image: "/images/bookfair.png",
       github: "https://github.com/Sathiyabalan29/BookFair",
-      demo: null,
-      demoType: null
-    },
-    {
-      id: "pdfbot",
-      title: "AI-Powered PDF Chatbot",
-      type: "Individual Project",
-      period: "May 2026 – Present",
-      technologies: ["Next.js", "Python", "Flask", "LangChain", "Groq AI", "ChromaDB", "PyPDF2", "Tailwind CSS", "Docker", "REST APIs"],
-      highlights: [
-        "Engineered an intelligent multi-PDF chatbot platform enabling semantic search and conversational document Q&A via natural language.",
-        "Integrated Groq AI (Llama 3) for lightning-fast LLM responses with citation mapping, and containerized microservices using Docker."
-      ],
-      aiFeatures: "Integrates ChromaDB semantic indexing and low-latency Groq AI context querying, mapping precise document citations dynamically in user chat windows.",
-      image: "/images/pdfbot.png",
-      github: "https://github.com/abinash1417/pdf-chatbot",
       demo: null,
       demoType: null
     }

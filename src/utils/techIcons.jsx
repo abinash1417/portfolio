@@ -148,6 +148,27 @@ export const techIconMap = {
       <rect x="5" y="10" width="14" height="11" rx="2" fill="#db2777" />
       <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="#db2777" strokeWidth="2.5" strokeLinecap="round" />
     </svg>
+  ),
+  langchain: (size = 24) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <circle cx="7" cy="7" r="3.2" fill="none" stroke="#1a7f5a" strokeWidth="2" />
+      <circle cx="17" cy="17" r="3.2" fill="none" stroke="#1a7f5a" strokeWidth="2" />
+      <path d="M9.3 9.3L14.7 14.7" stroke="#1a7f5a" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  ),
+  langgraph: (size = 24) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <circle cx="6" cy="6" r="2.4" fill="#1a7f5a" />
+      <circle cx="18" cy="6" r="2.4" fill="#1a7f5a" />
+      <circle cx="12" cy="18" r="2.4" fill="#1a7f5a" />
+      <path d="M8 6h8M7.3 8.1L11 15.9M16.7 8.1L13 15.9" stroke="#1a7f5a" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  ),
+  streamlit: (size = 24) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <rect width="20" height="20" x="2" y="2" rx="4" fill="#ff4b4b" />
+      <path d="M7 15l3.5-5.5L13 13l4-6" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
   )
 };
 
@@ -220,6 +241,15 @@ export function getTechIcon(techName, size = 24) {
   }
   if (normalized.includes('chroma')) {
     return techIconMap.chromadb(size);
+  }
+  if (normalized.includes('langgraph')) {
+    return techIconMap.langgraph(size);
+  }
+  if (normalized.includes('langchain')) {
+    return techIconMap.langchain(size);
+  }
+  if (normalized.includes('streamlit')) {
+    return techIconMap.streamlit(size);
   }
   if (normalized.includes('jwt')) {
     return techIconMap.jwt(size);

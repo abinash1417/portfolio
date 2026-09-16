@@ -53,7 +53,7 @@ function HexGrid() {
 
 const ROLES = [
   { label: 'Backend Architect',    color: '#22d3ee' },
-  { label: 'AI Solutions Builder', color: '#fb7185' },
+  { label: 'AI/ML Engineer',       color: '#fb7185' },
   { label: 'Software Engineer',    color: '#a3e635' },
   { label: 'Full-Stack Developer', color: '#818cf8' },
 ];
@@ -82,7 +82,7 @@ function WordFlip() {
 
 /* ═══════════════════════════════════════════════════════════════
    SPRING BOOT CODE TYPER — real Java/Spring code from Abinash's
-   actual projects: ElectroMart, Hospital App, PDF Chatbot
+   actual projects: ElectroMart, Hospital App
 ═══════════════════════════════════════════════════════════════ */
 const SPRING_PAIRS = [
   {
@@ -350,7 +350,7 @@ export default function Hero() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="hero-wrapper">
           <div className="hero-content">
-            <div className="badge" style={{ marginBottom: '1.25rem', width: 'fit-content' }}>Open to Internships 👋</div>
+            <div className="badge" style={{ marginBottom: '1.25rem', width: 'fit-content' }}>Open to SE & AI/ML Internships 👋</div>
             <h1 className="hero-name" style={{ fontSize: '4.6rem', lineHeight: '1.05', fontWeight: 800, marginBottom: '1rem' }}>
               Hi, I'm <br /><span className="gradient-text">{fullName}</span>
             </h1>

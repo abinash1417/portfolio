@@ -57,7 +57,7 @@ function ProjectCard({ project }) {
       }} />
 
       {/* Project image */}
-      <div className="project-graphic-frame" style={{ height:'210px', overflow:'hidden', borderRadius:'10px', marginBottom:'0.85rem', position:'relative' }}>
+      <div className="project-graphic-frame" style={{ height:'175px', overflow:'hidden', borderRadius:'10px', marginBottom:'0.85rem', position:'relative' }}>
         {!showPlaceholder ? (
           <img
             src={displayImg}
@@ -109,7 +109,7 @@ function ProjectCard({ project }) {
         <div style={{ display:'flex', alignItems:'center', gap:'0.4rem', flexWrap:'wrap' }}>
           <h3 className="project-compact-title">{project.title}</h3>
         </div>
-        <span className="project-compact-category">{project.type} · {project.period}</span>
+        <span className="project-compact-category">{project.type}{project.period ? ` · ${project.period}` : ''}</span>
       </div>
 
       <p className="project-compact-desc">{project.highlights[0]}</p>
@@ -158,14 +158,41 @@ function ProjectCard({ project }) {
   );
 }
 
+const FILTERS = [
+  { id: 'all',       label: 'All' },
+  { id: 'fullstack', label: 'Full-Stack' },
+  { id: 'aiml',      label: 'AI/ML' },
+];
+
 export default function Projects() {
   const { projects } = cvData;
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filteredProjects = activeFilter === 'all'
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
+
   return (
     <section id="projects" className="projects-section">
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
+
+        <div className="projects-filter-row" role="tablist" aria-label="Filter projects by category">
+          {FILTERS.map((f) => (
+            <button
+              key={f.id}
+              role="tab"
+              aria-selected={activeFilter === f.id}
+              className={`projects-filter-tab${activeFilter === f.id ? ' active' : ''}`}
+              onClick={() => setActiveFilter(f.id)}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
         <div className="projects-grid-2col">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

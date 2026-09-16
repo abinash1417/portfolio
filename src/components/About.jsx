@@ -130,12 +130,15 @@ export default function About() {
                 production-ready applications.
               </p>
               <p className="about-bio-text secondary">
-                I've developed <strong>AI-driven document search systems</strong>, full-featured
-                e-commerce platforms with <strong>JWT-based role access control</strong>, and real-time
-                hospital dispatch consoles. By applying <strong>Object-Oriented Programming (OOP)</strong>,{' '}
-                <strong>SOLID principles</strong>, and clean architecture practices, I create
-                maintainable, extensible, and testable software while following industry best practices
-                for scalability, reliability, and long-term maintainability.
+                Alongside full-stack development, I build applied <strong>Generative AI systems</strong> —
+                multi-agent architectures using <strong>LangChain</strong> and <strong>LangGraph</strong>,{' '}
+                <strong>Retrieval-Augmented Generation (RAG)</strong> pipelines with vector databases like{' '}
+                <strong>ChromaDB</strong>, and structured LLM evaluation tools. I've developed
+                full-featured e-commerce platforms with <strong>JWT-based role access control</strong>,
+                real-time hospital dispatch consoles, and multi-agent AI platforms for research and
+                code review. By applying <strong>OOP</strong>, <strong>SOLID principles</strong>, and
+                clean architecture practices across both, I create maintainable, extensible software —
+                whether that's a REST API or an AI agent pipeline.
               </p>
             </div>
           </div>
